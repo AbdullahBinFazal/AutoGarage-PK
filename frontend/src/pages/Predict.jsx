@@ -30,7 +30,7 @@ export default function Predict() {
     setLoading(true);
     setPrediction(null);
     try {
-      const response = await axios.post('http://127.0.0.1:5000/predict', formData);
+      const response = await axios.post('https://auto-garage-pk.vercel.app/predict', formData);
       setPrediction(response.data.predicted_price);
     } catch (error) {
       console.error(error);
